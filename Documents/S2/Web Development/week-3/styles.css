@@ -1,0 +1,83 @@
+/*CSS stands for Cascading Style Sheets
+    *lines that come after override earlier ones
+    but more specific directions override less specific ones*/
+
+/*Keeping CSS/styling in separate document is standard
+    but sometimes you put it in the HTML for debugging.
+    Also, in-line (or in HTML file) styling overrides CSS*/
+
+.single-lines { 
+    border-style: dotted;
+    /*this only applied to items of the "class" called 'single-lines'*/
+
+
+#instructions {
+    background-color: #f5d1ed;
+    /*this only applied to the one item with the "id" called 'instructions'*/
+}
+
+main {
+    border: solid;
+ }
+
+* {
+    color:blueviolet;
+    /*asterisks grab everything*/
+}
+
+h1, h2 {
+    text-decoration: underline;
+}
+
+.single-lines {
+    color: #000001;
+    border-color: #9b19aa;
+}
+
+nav a {
+    color: #00cfcf;
+}
+
+main > p {
+    text-transform: uppercase;
+    /*only affects 'p' that is a child of 'main'*/
+}
+
+h3 + a {
+    color:#00ff00;
+    /*only affects the link RIGHT under h3*/
+}
+
+h3 ~ a {
+    color: #ff00ff;
+    /*affected all the linkes that came after h3*/
+}
+
+main > * > p {
+    /*grab ANY (*) child nested under 'main', then any grandchild that has 'p'*/
+    color: #f0f0f0;
+}
+
+h1 {} 
+
+li:not(#special) {
+    /*INVERSION = this grabs everything in the 'li' (list) EXCEPT the line with the id 'special'*/
+        color: #f7f7f7;
+}
+
+li + li {
+    /*grabs every list item except the first one*/
+    color:0fff00
+}
+
+
+'/*body {
+    color: #5996ff; /*sets text color*/
+    background-color: #f9f9f9;
+    border-style: solid; /*sets border for entire page*/
+    border-color: #c15dff;
+    border-style: dotted;
+    text-align: right;
+    text-decoration: none; /*this is how links are decorated. options include "none" and "underline"*/
+    text-transform: uppercase;
+}*/
